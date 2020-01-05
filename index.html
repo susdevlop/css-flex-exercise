@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0;" >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    body{
+      background: #f6f7f9;
+    }
+    #page{
+      height: 100vh;
+      display: flex;
+    }
+    header{
+      position: fixed;
+      background: #fff;
+      box-shadow: 0px 1px 2px #ccc;
+      width: calc(100% - 1rem);
+      padding: .5rem;
+      align-items: center;
+    }
+    #inputBox{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background: #f6f7f9;
+      border-radius: 0.3rem;
+      padding: 0.2rem .5rem;
+    }
+    #search{
+      width: 1.6rem;
+      height: 1.6rem;
+      background-image: url('./images/sousuo.svg');
+      background-repeat: no-repeat;
+      background-size: 1.6rem;
+      padding-left: .5rem;
+    }
+    #answer{
+      width: 1.6rem;
+      height: 1.6rem;
+      background-image: url('./images/bi.svg');
+      background-repeat: no-repeat;
+      background-size: 1.6rem;
+      padding-left: .5rem;
+    }
+    #headerInput{
+      border: 0;
+      flex: 1;
+      background: #f6f7f9;
+    }
+    #nav{
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      flex-direction: row;
+      padding-top: .5rem;
+    }
+    #nav li{
+      list-style: none;
+      flex: 1;
+    }
+    #nav li a {
+      color: #999;
+      text-decoration: none;
+      display: block;
+    }
+    #nav .actived a{
+      color: #111;
+    }
+    #content{
+      padding-top: 5rem;
+    }
+    .article{
+      display: flex;
+      flex-direction: column;
+      margin-top: .5rem;
+      background: #fff;
+      padding: .5rem;
+    }
+    .title{
+      font-size: .9rem;
+    }
+    .headPhoto{
+      margin-top: .3rem;
+      width: 100%;
+      height: calc((100vw - 5rem) * 9 / 16);
+    }
+    .headPhoto >img{
+      width: 100%;
+      height: 100%;
+    }
+    .textPreview{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      margin-top: .5rem;
+    }
+    .textPreview p{
+      font-size: .5rem;
+      flex: 3;
+      margin-right: .5rem;
+    }
+    .textPreview img{
+      flex: 1;
+      border: 0;
+      width: 30%;
+      height: 30%;
+    }
+    .interactive{
+      display: flex;
+      font-size: .8rem;
+      color: rgb(163, 157, 157);
+    }
+    .interactive i{
+      font-style: normal;
+    }
+    .support{
+      margin-right: 1rem;
+    }
+  </style>
+</head>
+<body>
+<!--   id:为page的元素成为了容器，我是page元素的子元素。
+  也是容器成员。所有容器成员称为项目 -->
+  <header>
+    <div id="inputBox">
+      <i id="search"></i>
+      <input type="text" placeholder="为什么可爱的女生总被骂很作" id="headerInput">
+      <i id="answer"></i>
+    </div>
+    <ul id="nav"> 
+      <li><a href="#">关注</a></li>
+      <li class="actived"><a href="#">推荐</a></li>
+      <li><a href="#">热榜</a></li>
+      <li><a href="#">视频</a></li>
+    </ul>
+  </header>
+  <div id="content">
+
+    <div class="article">
+      <a class="title">
+        <h4>HTML学到什么程度才能叫精通？</h4>
+      </a>
+      <a class="textPreview">
+        <p>Iconfont-国内功能很强大且图标内容很丰富的矢量图标库,提供矢量图标下载、在线存储、格式转换等功能。阿里巴巴体验团队倾力打造,设计和前端开发的便</p>
+        <img src="./images/Robynn&Kendy.jpg">
+      </a>
+      <div class="interactive">
+        <div class="support"><i>960</i> 赞同</div>
+        <div class="like"><i>800</i> 评论</div>
+      </div>
+    </div>
+    <div class="article">
+      <a class="title">
+        <h4>HTML学到什么程度才能叫精通？</h4>
+      </a>
+      <div class="headPhoto">
+        <img src="./images/wallhaven-nklk8q.jpg">
+      </div>
+      <a class="textPreview">
+        <p>Iconfont-国内功能很强大且图标内容很丰富的矢量图标库,提供矢量图标下载、在线存储、格式转换等功能。阿里巴巴体验团队倾力打造,设计和前端开发的便</p>
+        <img src="./images/Robynn&Kendy.jpg">
+      </a>
+      <div class="interactive">
+        <div class="support"><i>960</i> 赞同</div>
+        <div class="like"><i>800</i> 评论</div>
+      </div>
+    </div>
+
+    <div class="article">
+      <a class="title">
+        <h4>HTML学到什么程度才能叫精通？</h4>
+      </a>
+      <div class="headPhoto">
+        <img src="./images/i.png">
+      </div>
+      <a class="textPreview">
+        <p>Iconfont-国内功能很强大且图标内容很丰富的矢量图标库,提供矢量图标下载、在线存储、格式转换等功能。阿里巴巴体验团队倾力打造,设计和前端开发的便</p>
+      </a>
+      <div class="interactive">
+        <div class="support"><i>960</i> 赞同</div>
+        <div class="like"><i>800</i> 评论</div>
+      </div>
+    </div>
+
+    <div class="article">
+      <a class="title">
+        <h4>HTML学到什么程度才能叫精通？</h4>
+      </a>
+      <div class="headPhoto">
+        <img src="./images/wallhaven-nklk8q.jpg">
+      </div>
+      <a class="textPreview">
+        <p>Iconfont-国内功能很强大且图标内容很丰富的矢量图标库,提供矢量图标下载、在线存储、格式转换等功能。阿里巴巴体验团队倾力打造,设计和前端开发的便</p>
+        <img src="./images/i.png">
+      </a>
+      <div class="interactive">
+        <div class="support"><i>960</i> 赞同</div>
+        <div class="like"><i>800</i> 评论</div>
+      </div>
+    </div>
+
+
+    <div class="article">
+      <a class="title">
+        <h4>穿旗袍特别好看是种怎样的体验？</h4>
+      </a>
+      <a class="textPreview">
+        <p>前几天收拾旧相册，意外看到了十几年前和妈妈一起拍的照片，一边被当年的乡村非主流影楼风笑到岔气，一边怀念起当年的母上大人来。 对很多女生来说</p>
+      </a>
+      <div class="interactive">
+        <div class="support"><i>960</i> 赞同</div>
+        <div class="like"><i>800</i> 评论</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article">
+    <a class="title">
+      <h4>HTML学到什么程度才能叫精通？</h4>
+    </a>
+    <div class="headPhoto">
+      <img src="./images/i.png">
+    </div>
+    <a class="textPreview">
+      <p>Iconfont-国内功能很强大且图标内容很丰富的矢量图标库,提供矢量图标下载、在线存储、格式转换等功能。阿里巴巴体验团队倾力打造,设计和前端开发的便</p>
+    </a>
+    <div class="interactive">
+      <div class="support"><i>960</i> 赞同</div>
+      <div class="like"><i>800</i> 评论</div>
+    </div>
+  </div>
+
+  <div class="article">
+    <a class="title">
+      <h4>HTML学到什么程度才能叫精通？</h4>
+    </a>
+    <a class="textPreview">
+      <p>Iconfont-国内功能很强大且图标内容很丰富的矢量图标库,提供矢量图标下载、在线存储、格式转换等功能。阿里巴巴体验团队倾力打造,设计和前端开发的便</p>
+      <img src="./images/i.png">
+    </a>
+    <div class="interactive">
+      <div class="support"><i>960</i> 赞同</div>
+      <div class="like"><i>800</i> 评论</div>
+    </div>
+  </div>
+
+  <div class="article">
+    <a class="title">
+      <h4>HTML学到什么程度才能叫精通？</h4>
+    </a>
+    <div class="headPhoto">
+      <img src="./images/wallhaven-nklk8q.jpg">
+    </div>
+    <a class="textPreview">
+      <p>Iconfont-国内功能很强大且图标内容很丰富的矢量图标库,提供矢量图标下载、在线存储、格式转换等功能。阿里巴巴体验团队倾力打造,设计和前端开发的便</p>
+      <img src="./images/i.png">
+    </a>
+    <div class="interactive">
+      <div class="support"><i>960</i> 赞同</div>
+      <div class="like"><i>800</i> 评论</div>
+    </div>
+  </div>
+  <footer></footer>
+  <!-- 以下6个属性设置在容器上。
+        flex-direction 觉得主轴的方向 即项目的排列方向
+        flex-wrap
+        flex-flow
+        justify-content
+        align-items
+        align-content -->
+
+  <!-- 项目默认沿主轴排列。单个项目占据的主轴空间叫做main size，
+    占据的交叉轴空间叫做cross size。 -->
+</body>
+</html>
